@@ -7,6 +7,7 @@ enc = tiktoken.get_encoding("gpt2")
 
 # user input
 word = input("Enter a word (keep it simple!): ")
+word = f" {word}" # gpt-2 words typically have a leading space
 
 # tokenize the word
 token_ids = enc.encode(word) 
